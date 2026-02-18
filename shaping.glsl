@@ -23,3 +23,10 @@ float doubleCuebicSeat(float x, float a, float b){
 		return b + (1-b)*pow((x-a)/(1-a),2*n+1);
 	}
 }
+
+
+float quadraticThroughPoint(float x, float a, float b){
+	float term1 = ((1-b)/(1-a) - b/a);
+	float term2 = (((1-b)/(1-a) - b/a) - b)/a;
+	return term1*pow(x,2) - term2*x;
+}
