@@ -30,3 +30,9 @@ float quadraticThroughPoint(float x, float a, float b){
 	float term2 = (((1-b)/(1-a) - b/a) - b)/a;
 	return term1*pow(x,2) - term2*x;
 }
+
+
+float safePow(float a, float b){
+    // From tim.yfx in Touchdesigner's Discord (all errors mine).
+	return (a<0.0 && fract(b)==0) ? sign(a) * pow(abs(a),b) : pow(a,b);
+}
