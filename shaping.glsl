@@ -36,3 +36,22 @@ float safePow(float a, float b){
     // From tim.yfx in Touchdesigner's Discord (all errors mine).
 	return (a<0.0 && fract(b)==0) ? sign(a) * pow(abs(a),b) : pow(a,b);
 }
+
+
+float doublePolynomialSigmoid(float x, int n){
+	if (mod(n, 2) == 0) {
+		// even exponent 
+		if (x<=0.5) {
+			return pow(2.0*x, 2*n)/2.0;
+		} else {
+			return 1.0 - safePow(2.0*(x-1.0), 2.0*n)/2.0;
+		}
+	} else {
+		// odd exponent 
+		if (x<=0.5) {
+			return pow(2.0*x, 2*n+1)/2.0;
+		} else {
+			return 1.0 + safePow(2.0*(x-1.0), 2.0*n+1)/2.0;
+		}
+	} 
+}
