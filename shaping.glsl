@@ -21,7 +21,7 @@ float doubleCuebicSeat(float x, float a, float b){
 		return b - b*pow((1-x/a), 2*n+1);
 	} else {
 		return b + (1-b)*pow((x-a)/(1-a),2*n+1);
-	}
+	}   
 }
 
 
