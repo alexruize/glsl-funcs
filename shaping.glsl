@@ -55,3 +55,17 @@ float doublePolynomialSigmoid(float x, int n){
 		}
 	} 
 }
+
+
+float exponentialEaseIn(float x, float a){
+	return pow(x, 1.0/a);
+}
+
+
+float doubleExponentialSigmoid(float x, float a){
+	if(x<=0.5){
+		return pow(2.0*x, 1.0/a)/2.0;
+	} else {
+		return 1 - pow(2.0*(1.0-x), 1.0/a)/2.0;
+	}
+}
