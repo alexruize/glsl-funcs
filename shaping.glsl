@@ -69,3 +69,11 @@ float doubleExponentialSigmoid(float x, float a){
 		return 1 - pow(2.0*(1.0-x), 1.0/a)/2.0;
 	}
 }
+
+
+float logisticSigmoid(float x, float a){
+	float A = 1/(1+exp(-2.0*a*(x-0.5)));
+	float B = 1/(1+exp(a));
+	float C = 1/(1+exp(-a));
+	return (A-B)/(C-B);
+}
