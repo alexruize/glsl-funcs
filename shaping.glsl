@@ -77,3 +77,17 @@ float logisticSigmoid(float x, float a){
 	float C = 1/(1+exp(-a));
 	return (A-B)/(C-B);
 }
+
+
+float circularEaseOut(float x){
+	return sqrt(1-pow(1-x, 2));
+}
+
+
+float doubleCircleSeat(float x, float a){
+	if(x<=a){
+		return sqrt(a*a - pow(x-a, 2));
+	} else {
+		return 1 - sqrt(pow(1-a, 2) - pow(x-a, 2));
+	}
+}
