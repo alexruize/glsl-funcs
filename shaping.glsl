@@ -91,3 +91,13 @@ float doubleCircleSeat(float x, float a){
 		return 1 - sqrt(pow(1-a, 2) - pow(x-a, 2));
 	}
 }
+
+
+float doubleCircleSigmoid(float x, float a){
+	if(x<=a){
+		return a - sqrt(a*a - x*x);
+	} else {
+		return a + sqrt(pow(1-a, 2) - pow(x-1, 2));
+	}
+}
+
