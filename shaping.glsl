@@ -101,3 +101,13 @@ float doubleCircleSigmoid(float x, float a){
 	}
 }
 
+
+float doubleEllipticSeat(float x, float a, float b){
+	if(x<=a){
+		return b/a * sqrt(a*a - pow(x-a, 2));
+	} else {
+		return 1 - (1-b)/(1-a) * sqrt(pow(1-a, 2) - pow(x-a, 2));
+	}
+}
+
+
