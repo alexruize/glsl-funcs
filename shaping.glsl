@@ -111,3 +111,7 @@ float doubleEllipticSeat(float x, float a, float b){
 }
 
 
+float quadraticBezier(float x, float a, float b){
+	float t = (sqrt(a*a + (1-2.0*a)*x) - a)/(1 - 2.0*a);
+	return (1-2.0*b)*t*t + 2.0*b*t;
+}
