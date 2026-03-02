@@ -115,3 +115,9 @@ float quadraticBezier(float x, float a, float b){
 	float t = (sqrt(a*a + (1-2.0*a)*x) - a)/(1 - 2.0*a);
 	return (1-2.0*b)*t*t + 2.0*b*t;
 }
+
+
+float normalizeRange(float x){
+	// Remap -1-1 to 0-1, use with shape{1,2} below.
+	return (x*2.0)-1;
+}
