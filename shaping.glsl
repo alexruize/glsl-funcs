@@ -121,3 +121,8 @@ float normalizeRange(float x){
 	// Remap -1-1 to 0-1, use with shape{1,2} below.
 	return (x*2.0)-1;
 }
+
+
+float tDistShape(float x){
+	return 1 - pow(abs(sin(PI*x/2.0)),2);
+}
