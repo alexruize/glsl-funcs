@@ -126,3 +126,9 @@ float normalizeRange(float x){
 float tDistShape(float x){
 	return 1 - pow(abs(sin(PI*x/2.0)),2);
 }
+
+
+
+float tDistShapeTrunc(float x){
+	return 1 - pow(max(0.0, 2.0*abs(x)-1.0),1.5);
+}
